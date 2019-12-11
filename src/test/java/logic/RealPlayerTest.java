@@ -2,6 +2,12 @@ package logic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import java.util.ArrayList;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
 public class RealPlayerTest {
@@ -251,24 +257,20 @@ public class RealPlayerTest {
     void testgetDice () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.getDice().size() + "\n" + player.toStorageString());
-        player.rollAllDice();
-        player.getDice();
-        System.out.println(player.getDice().size() + "\n" + player.toStorageString());
+        System.out.println(player.getDice().size());
 
-        Assertions.assertNotEquals(0, player.getDice().size());
+        Assertions.assertEquals(5, player.getDice().size());
     }
 
     @Test
     void testGetDieValues () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
+        RealPlayer fakePlayer =  mock(RealPlayer.class);
 
-        System.out.println(player.getDieValues().length + "\n" + player.toStorageString());
-        player.rollAllDice();
-        player.getDieValues();
-        System.out.println(player.getDieValues().length + "\n" + player.toStorageString());
+        when(fakePlayer.getDieValues()).thenReturn(new int[] {5,5,5,5,5});
+        System.out.println("Fake: " + fakePlayer.getDieValues().length + " Real: " + player.getDieValues().length);
 
-        Assertions.assertNotEquals(0, player.getDieValues().length);
+        Assertions.assertEquals(fakePlayer.getDieValues().length, player.getDieValues().length);
     }
 
     @Test
