@@ -232,14 +232,14 @@ public class RealPlayerTest {
     }
 
     @Test
-    void testPayMarkerToPotWhenPlayerMarkAtZero () {
-        RealPlayer player = new RealPlayer("Dante", 0, true);
+    void testPayMarkerToPotWhenPlayerCannotPay () {
+        RealPlayer player = new RealPlayer("Dante", 10, true);
 
         System.out.println(player.getMarker());
         player.payMarkerToPot(20);
         System.out.println(player.getMarker());
 
-        Assertions.assertEquals(0, player.getMarker());
+        Assertions.assertEquals(10, player.getMarker());
     }
 
     @Test
@@ -275,11 +275,13 @@ public class RealPlayerTest {
 
     @Test
     void testToStorageString () {
-        RealPlayer player = new RealPlayer("Dante", 100, false);
-        RealPlayer player2 = new RealPlayer("Albedo", 150, true);
+        RealPlayer player = new RealPlayer("Dante", 80, true);
+        RealPlayer player2 = new RealPlayer("Albedo", 150, false);
 
-        System.out.println(player.toStorageString());
-        System.out.println(player2.toStorageString());
+        System.out.println(player.toStorageString() + "\n" + player2.toStorageString());
+        player.rollAllDice(); player.payMarkerToPot(40);
+        player2.rollAllDice(); player2.payMarkerFromPot(40);
+        System.out.println(player.toStorageString() + "\n" + player2.toStorageString());
 
         Assertions.assertNotEquals(player2.toStorageString(), player.toStorageString());
     }
