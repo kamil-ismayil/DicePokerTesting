@@ -14,9 +14,6 @@ import static org.mockito.Mockito.when;
 class DieTest {
 
     @Mock
-    Die dieMock;
-
-    @Mock
     public static GameEngine gameEngine;
 
     @Test
