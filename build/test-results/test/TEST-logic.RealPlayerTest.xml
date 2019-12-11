@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="logic.RealPlayerTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2019-12-11T13:33:36" hostname="LAPTOP-VBV27ABK" time="0.102">
+<testsuite name="logic.RealPlayerTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2019-12-11T13:39:44" hostname="Kamil-PC" time="0.034">
   <properties/>
-  <testcase name="testgetDice()" classname="logic.RealPlayerTest" time="0.04"/>
-  <testcase name="testDie5NumberOfSides()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testgetDice()" classname="logic.RealPlayerTest" time="0.003"/>
+  <testcase name="testDie5NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testDie4NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testPayMarkerToPotWhenPlayerMarkAtZero()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testDie3NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollSomeDieDie1()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testDie3NumberOfSides()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testRollSomeDieDie1()" classname="logic.RealPlayerTest" time="0.0"/>
   <testcase name="testRollSomeDieDie2()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testRollSomeDieDie3()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testGetPlayerMark()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testGetPlayerName()" classname="logic.RealPlayerTest" time="0.004"/>
-  <testcase name="testRollAllDieDie1()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testGetPlayerMark()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testGetPlayerName()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testRollAllDieDie1()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testRollAllDieDie2()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testRollAllDieDie3()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollAllDieDie4()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testRollAllDieDie4()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testRollAllDieDie5()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testDie2NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testGetPlayerIsHumanFalse()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testPayMarkerToPot()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testDie1NumberOfSides()" classname="logic.RealPlayerTest" time="0.003"/>
+  <testcase name="testDie2NumberOfSides()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testGetPlayerIsHumanFalse()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testPayMarkerToPot()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testDie1NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testToStorageString()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollSomeDie4()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testRollSomeDie4()" classname="logic.RealPlayerTest" time="0.0"/>
   <testcase name="testRollSomeDie5()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testGetDieValues()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testPayMarkerFromPot()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testGetPlayerIsHumanTrue()" classname="logic.RealPlayerTest" time="0.001"/>
   <system-out><![CDATA[5
-Dante	100	true	2 5 5 6 1 
+Dante	100	true	5 3 2 3 2 
 5
-Dante	100	true	2 3 5 2 5 
+Dante	100	true	1 3 5 4 3 
 6
 6
 0
@@ -58,16 +58,16 @@ false
 100
 80
 6
-Dante	100	false	3 1 4 3 4 
-Albedo	150	true	1 1 4 1 4 
+Dante	100	false	4 2 1 1 1 
+Albedo	150	true	5 6 4 3 4 
 1 1 1 1 1
 1 1 1 2 1
 1 1 1 1 1
 1 1 1 1 2
 5
-Dante	100	true	5 1 3 4 4 
+Dante	100	true	3 6 2 1 6 
 5
-Dante	100	true	6 2 1 6 2 
+Dante	100	true	4 5 4 5 4 
 100
 120
 true

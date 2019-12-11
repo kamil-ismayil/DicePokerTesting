@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logic.DieTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2019-12-11T13:39:43" hostname="Kamil-PC" time="0.697">
+  <properties/>
+  <testcase name="IsBettingDonePropertyCheckFalseFXML()" classname="logic.DieTest" time="0.662"/>
+  <testcase name="getSidesTest()" classname="logic.DieTest" time="0.002"/>
+  <testcase name="setCurrentFace()" classname="logic.DieTest" time="0.001"/>
+  <testcase name="getDieName()" classname="logic.DieTest" time="0.003"/>
+  <testcase name="bettingDoneMethodIsCalledTrue()" classname="logic.DieTest" time="0.003"/>
+  <testcase name="getCurrentFaceCheckNotNullTrue()" classname="logic.DieTest" time="0.003"/>
+  <testcase name="getCurrentFaceString()" classname="logic.DieTest" time="0.002"/>
+  <testcase name="getTimesRolled()" classname="logic.DieTest" time="0.001"/>
+  <testcase name="IsBettingDonePropertyCheckTrueFXML()" classname="logic.DieTest" time="0.003"/>
+  <testcase name="setDieName()" classname="logic.DieTest" time="0.001"/>
+  <testcase name="bettingDoneGettingCurrentPlayerIsHuman()" classname="logic.DieTest" time="0.002"/>
+  <testcase name="getRollHistorySizeNotNull()" classname="logic.DieTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
