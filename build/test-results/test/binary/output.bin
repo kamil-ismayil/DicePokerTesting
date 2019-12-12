@@ -1,69 +1,65 @@
-5The player must bet more than the previous max bet!
-	LBPN: 1
-$The player cannot afford this bet!
-#Calling cost for this player is 5
-5The player must bet more than the previous max bet!
-"$Calling cost for this player is 10
-$1 
-$moo
-$2 
-$moo
-$3 
-$moo
-$4 
-$moo
-$0	1	0	100	1	1
-$Mee
-$10 20 30 40
-$Mee
-%CPP: 1 FPP: 0
-+	LBPN: 2
-2$Calling cost for this player is 10
-9	LBPN: 1
-F	LBPN: 1
-HCPP: 0 FPP: 0
-KJ5
-KJDante	100	true	5 3 2 3 2 
-KJ5
-KJDante	100	true	1 3 5 4 3 
-KL6
-KM6
-KN0
-KN0
-KO6
-KP1 1 1 1 1
-KP2 1 1 1 1
-KQ1 1 1 1 1
-KQ1 2 1 1 1
-KR1 1 1 1 1
-KR1 1 2 1 1
-KS100
-KTDante
-KU1
-KU2
-KV1
-KV2
-KW1
-KW2
-KX1
-KX2
-KY1
-KY2
-KZ6
-K[false
-K\100
-K\80
-K]6
-K^Dante	100	false	4 2 1 1 1 
-K^Albedo	150	true	5 6 4 3 4 
-K_1 1 1 1 1
-K_1 1 1 2 1
-K`1 1 1 1 1
-K`1 1 1 1 2
-Ka5
-KaDante	100	true	3 6 2 1 6 
-Ka5
-KaDante	100	true	4 5 4 5 4 
-Kb100
-Kb120
-Kctrue
+5The player must bet more than the previous max bet!
+	LBPN: 1
+$The player cannot afford this bet!
+#Calling cost for this player is 5
+5The player must bet more than the previous max bet!
+#$Calling cost for this player is 10
+%1 
+%moo
+%2 
+%moo
+%3 
+%moo
+%4 
+%moo
+%0	1	0	100	1	1
+%Mee
+%10 20 30 40
+%Mee
+&CPP: 1 FPP: 0
+,	LBPN: 2
+3$Calling cost for this player is 10
+:	LBPN: 1
+G	LBPN: 1
+ICPP: 0 FPP: 0
+LK10
+LK10
+LM5
+LN6
+LO6
+LP6
+LQ1 1 1 1 1
+LQ2 1 1 1 1
+LR1 1 1 1 1
+LR1 2 1 1 1
+LS1 1 1 1 1
+LS1 1 2 1 1
+LT100
+LUDante
+LV1
+LV2
+LW1
+LW2
+LX1
+LX2
+LY1
+LY2
+LZ1
+LZ2
+L[6
+L\false
+L]100
+L]80
+L^6
+L_Dante	80	true	1 5 2 3 3 
+L_Albedo	150	false	6 5 4 3 1 
+L_Dante	40	true	6 4 1 3 2 
+L_Albedo	190	false	1 1 5 1 5 
+L`1 1 1 1 1
+L`1 1 1 2 1
+La1 1 1 1 1
+La1 1 1 1 2
+LbFake: 5 Real: 5
+Lc100
+Lc120
+Ldtrue
