@@ -2,6 +2,12 @@ package logic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import java.util.ArrayList;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
 public class RealPlayerTest {
@@ -226,14 +232,14 @@ public class RealPlayerTest {
     }
 
     @Test
-    void testPayMarkerToPotWhenPlayerMarkAtZero () {
-        RealPlayer player = new RealPlayer("Dante", 0, true);
+    void testPayMarkerToPotWhenPlayerCannotPay () {
+        RealPlayer player = new RealPlayer("Dante", 10, true);
 
         System.out.println(player.getMarker());
         player.payMarkerToPot(20);
         System.out.println(player.getMarker());
 
-        Assertions.assertEquals(0, player.getMarker());
+        Assertions.assertEquals(10, player.getMarker());
     }
 
     @Test
@@ -251,33 +257,31 @@ public class RealPlayerTest {
     void testgetDice () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.getDice().size() + "\n" + player.toStorageString());
-        player.rollAllDice();
-        player.getDice();
-        System.out.println(player.getDice().size() + "\n" + player.toStorageString());
+        System.out.println(player.getDice().size());
 
-        Assertions.assertNotEquals(0, player.getDice().size());
+        Assertions.assertEquals(5, player.getDice().size());
     }
 
     @Test
     void testGetDieValues () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
+        RealPlayer fakePlayer =  mock(RealPlayer.class);
 
-        System.out.println(player.getDieValues().length + "\n" + player.toStorageString());
-        player.rollAllDice();
-        player.getDieValues();
-        System.out.println(player.getDieValues().length + "\n" + player.toStorageString());
+        when(fakePlayer.getDieValues()).thenReturn(new int[] {5,5,5,5,5});
+        System.out.println("Fake: " + fakePlayer.getDieValues().length + " Real: " + player.getDieValues().length);
 
-        Assertions.assertNotEquals(0, player.getDieValues().length);
+        Assertions.assertEquals(fakePlayer.getDieValues().length, player.getDieValues().length);
     }
 
     @Test
     void testToStorageString () {
-        RealPlayer player = new RealPlayer("Dante", 100, false);
-        RealPlayer player2 = new RealPlayer("Albedo", 150, true);
+        RealPlayer player = new RealPlayer("Dante", 80, true);
+        RealPlayer player2 = new RealPlayer("Albedo", 150, false);
 
-        System.out.println(player.toStorageString());
-        System.out.println(player2.toStorageString());
+        System.out.println(player.toStorageString() + "\n" + player2.toStorageString());
+        player.rollAllDice(); player.payMarkerToPot(40);
+        player2.rollAllDice(); player2.payMarkerFromPot(40);
+        System.out.println(player.toStorageString() + "\n" + player2.toStorageString());
 
         Assertions.assertNotEquals(player2.toStorageString(), player.toStorageString());
     }
