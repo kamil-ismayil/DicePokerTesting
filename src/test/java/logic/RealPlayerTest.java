@@ -2,12 +2,11 @@ package logic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
-import java.util.ArrayList;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+
+import static org.mockito.Mockito.*;
+
 
 
 public class RealPlayerTest {
@@ -17,7 +16,6 @@ public class RealPlayerTest {
         RealPlayer player = new RealPlayer("Bernt", 100, true);
 
         player.setName("Dante");
-        System.out.println(player.getName());
 
         Assertions.assertEquals("Dante", player.getName());
     }
@@ -27,7 +25,6 @@ public class RealPlayerTest {
         RealPlayer player = new RealPlayer("Dante", 50, true);
 
         player.setMarker(100);
-        System.out.println(player.getMarker());
 
         Assertions.assertEquals(100, player.getMarker());
     }
@@ -36,16 +33,12 @@ public class RealPlayerTest {
     void testGetPlayerIsHumanTrue () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.isHuman());
-
         Assertions.assertTrue(player.isHuman());
     }
 
     @Test
     void testGetPlayerIsHumanFalse () {
         RealPlayer player = new RealPlayer("Dante", 100, false);
-
-        System.out.println(player.isHuman());
 
         Assertions.assertFalse(player.isHuman());
     }
@@ -54,16 +47,12 @@ public class RealPlayerTest {
     void testDie1NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getSides());
-
         Assertions.assertEquals(6, player.die1.getSides());
     }
 
     @Test
     void testDie2NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
-
-        System.out.println(player.die2.getSides());
 
         Assertions.assertEquals(6, player.die2.getSides());
     }
@@ -72,16 +61,12 @@ public class RealPlayerTest {
     void testDie3NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die3.getSides());
-
         Assertions.assertEquals(6, player.die3.getSides());
     }
 
     @Test
     void testDie4NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
-
-        System.out.println(player.die4.getSides());
 
         Assertions.assertEquals(6, player.die4.getSides());
     }
@@ -90,8 +75,6 @@ public class RealPlayerTest {
     void testDie5NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die5.getSides());
-
         Assertions.assertEquals(6, player.die5.getSides());
     }
 
@@ -99,12 +82,7 @@ public class RealPlayerTest {
     void testRollSomeDieDie1 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
         player.rollSomeDie(true, false, false, false, false);
-
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
 
         Assertions.assertEquals(2, player.die1.getTimesRolled());
     }
@@ -113,12 +91,7 @@ public class RealPlayerTest {
     void testRollSomeDieDie2 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
         player.rollSomeDie(false, true, false, false, false);
-
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
 
         Assertions.assertEquals(2, player.die2.getTimesRolled());
     }
@@ -127,12 +100,7 @@ public class RealPlayerTest {
     void testRollSomeDieDie3 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
         player.rollSomeDie(false, false, true, false, false);
-
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
 
         Assertions.assertEquals(2, player.die3.getTimesRolled());
     }
@@ -141,12 +109,7 @@ public class RealPlayerTest {
     void testRollSomeDie4 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
         player.rollSomeDie(false, false, false, true, false);
-
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
 
         Assertions.assertEquals(2, player.die4.getTimesRolled());
     }
@@ -155,12 +118,7 @@ public class RealPlayerTest {
     void testRollSomeDie5 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
         player.rollSomeDie(false, false, false, false, true);
-
-        System.out.println(player.die1.getTimesRolled() + " " + player.die2.getTimesRolled() + " " + player.die3.getTimesRolled()
-                + " " + player.die4.getTimesRolled() + " " + player.die5.getTimesRolled());
 
         Assertions.assertEquals(2, player.die5.getTimesRolled());
     }
@@ -169,9 +127,7 @@ public class RealPlayerTest {
     void testRollAllDieDie1 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die1.getTimesRolled());
         player.rollAllDice();
-        System.out.println(player.die1.getTimesRolled());
 
         Assertions.assertEquals(2, player.die1.getTimesRolled());
     }
@@ -180,9 +136,7 @@ public class RealPlayerTest {
     void testRollAllDieDie2 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die2.getTimesRolled());
         player.rollAllDice();
-        System.out.println(player.die2.getTimesRolled());
 
         Assertions.assertEquals(2, player.die2.getTimesRolled());
     }
@@ -191,9 +145,7 @@ public class RealPlayerTest {
     void testRollAllDieDie3 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die3.getTimesRolled());
         player.rollAllDice();
-        System.out.println(player.die3.getTimesRolled());
 
         Assertions.assertEquals(2, player.die3.getTimesRolled());
     }
@@ -202,9 +154,7 @@ public class RealPlayerTest {
     void testRollAllDieDie4 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die4.getTimesRolled());
         player.rollAllDice();
-        System.out.println(player.die4.getTimesRolled());
 
         Assertions.assertEquals(2, player.die4.getTimesRolled());
     }
@@ -213,9 +163,7 @@ public class RealPlayerTest {
     void testRollAllDieDie5 () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.die5.getTimesRolled());
         player.rollAllDice();
-        System.out.println(player.die5.getTimesRolled());
 
         Assertions.assertEquals(2, player.die5.getTimesRolled());
     }
@@ -224,9 +172,7 @@ public class RealPlayerTest {
     void testPayMarkerToPot () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.getMarker());
         player.payMarkerToPot(20);
-        System.out.println(player.getMarker());
 
         Assertions.assertEquals(80, player.getMarker());
     }
@@ -235,9 +181,7 @@ public class RealPlayerTest {
     void testPayMarkerToPotWhenPlayerCannotPay () {
         RealPlayer player = new RealPlayer("Dante", 10, true);
 
-        System.out.println(player.getMarker());
         player.payMarkerToPot(20);
-        System.out.println(player.getMarker());
 
         Assertions.assertEquals(10, player.getMarker());
     }
@@ -246,9 +190,7 @@ public class RealPlayerTest {
     void testPayMarkerFromPot () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        System.out.println(player.getMarker());
         player.payMarkerFromPot(20);
-        System.out.println(player.getMarker());
 
         Assertions.assertEquals(120, player.getMarker());
     }
@@ -256,8 +198,6 @@ public class RealPlayerTest {
     @Test
     void testgetDice () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
-
-        System.out.println(player.getDice().size());
 
         Assertions.assertEquals(5, player.getDice().size());
     }
@@ -267,8 +207,7 @@ public class RealPlayerTest {
         RealPlayer player = new RealPlayer("Dante", 100, true);
         RealPlayer fakePlayer =  mock(RealPlayer.class);
 
-        when(fakePlayer.getDieValues()).thenReturn(new int[] {5,5,5,5,5});
-        System.out.println("Fake: " + fakePlayer.getDieValues().length + " Real: " + player.getDieValues().length);
+        when(fakePlayer.getDieValues()).thenReturn(new int[] {1,2,3,4,5});
 
         Assertions.assertEquals(fakePlayer.getDieValues().length, player.getDieValues().length);
     }
@@ -278,10 +217,8 @@ public class RealPlayerTest {
         RealPlayer player = new RealPlayer("Dante", 80, true);
         RealPlayer player2 = new RealPlayer("Albedo", 150, false);
 
-        System.out.println(player.toStorageString() + "\n" + player2.toStorageString());
         player.rollAllDice(); player.payMarkerToPot(40);
         player2.rollAllDice(); player2.payMarkerFromPot(40);
-        System.out.println(player.toStorageString() + "\n" + player2.toStorageString());
 
         Assertions.assertNotEquals(player2.toStorageString(), player.toStorageString());
     }

@@ -1,72 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="logic.RealPlayerTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2019-12-11T21:57:06" hostname="LAPTOP-VBV27ABK" time="0.235">
+<testsuite name="logic.RealPlayerTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2019-12-12T10:01:02" hostname="LAPTOP-VBV27ABK" time="1.635">
   <properties/>
-  <testcase name="testPayMarkerToPotWhenPlayerCannotPay()" classname="logic.RealPlayerTest" time="0.003"/>
-  <testcase name="testgetDice()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testPayMarkerToPotWhenPlayerCannotPay()" classname="logic.RealPlayerTest" time="0.056"/>
+  <testcase name="testgetDice()" classname="logic.RealPlayerTest" time="0.003"/>
   <testcase name="testDie5NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testDie4NumberOfSides()" classname="logic.RealPlayerTest" time="0.003"/>
+  <testcase name="testDie4NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testDie3NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollSomeDieDie1()" classname="logic.RealPlayerTest" time="0.004"/>
+  <testcase name="testRollSomeDieDie1()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testRollSomeDieDie2()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollSomeDieDie3()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testGetPlayerMark()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testGetPlayerName()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testRollAllDieDie1()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollAllDieDie2()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testRollSomeDieDie3()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testGetPlayerMark()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testGetPlayerName()" classname="logic.RealPlayerTest" time="0.007"/>
+  <testcase name="testRollAllDieDie1()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testRollAllDieDie2()" classname="logic.RealPlayerTest" time="0.001"/>
   <testcase name="testRollAllDieDie3()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollAllDieDie4()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testRollAllDieDie5()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testDie2NumberOfSides()" classname="logic.RealPlayerTest" time="0.003"/>
-  <testcase name="testGetPlayerIsHumanFalse()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testPayMarkerToPot()" classname="logic.RealPlayerTest" time="0.007"/>
-  <testcase name="testDie1NumberOfSides()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testToStorageString()" classname="logic.RealPlayerTest" time="0.006"/>
-  <testcase name="testRollSomeDie4()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testRollSomeDie5()" classname="logic.RealPlayerTest" time="0.002"/>
-  <testcase name="testGetDieValues()" classname="logic.RealPlayerTest" time="0.139"/>
-  <testcase name="testPayMarkerFromPot()" classname="logic.RealPlayerTest" time="0.001"/>
-  <testcase name="testGetPlayerIsHumanTrue()" classname="logic.RealPlayerTest" time="0.0"/>
-  <system-out><![CDATA[10
-10
-5
-6
-6
-6
-1 1 1 1 1
-2 1 1 1 1
-1 1 1 1 1
-1 2 1 1 1
-1 1 1 1 1
-1 1 2 1 1
-100
-Dante
-1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-6
-false
-100
-80
-6
-Dante	80	true	6 2 5 2 5 
-Albedo	150	false	1 6 1 2 2 
-Dante	40	true	4 4 3 2 4 
-Albedo	190	false	4 6 6 3 5 
-1 1 1 1 1
-1 1 1 2 1
-1 1 1 1 1
-1 1 1 1 2
-Fake: 5 Real: 5
-100
-120
-true
-]]></system-out>
+  <testcase name="testRollAllDieDie4()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testRollAllDieDie5()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testDie2NumberOfSides()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testGetPlayerIsHumanFalse()" classname="logic.RealPlayerTest" time="0.004"/>
+  <testcase name="testPayMarkerToPot()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testDie1NumberOfSides()" classname="logic.RealPlayerTest" time="0.005"/>
+  <testcase name="testToStorageString()" classname="logic.RealPlayerTest" time="0.005"/>
+  <testcase name="testRollSomeDie4()" classname="logic.RealPlayerTest" time="0.001"/>
+  <testcase name="testRollSomeDie5()" classname="logic.RealPlayerTest" time="0.0"/>
+  <testcase name="testGetDieValues()" classname="logic.RealPlayerTest" time="1.417"/>
+  <testcase name="testPayMarkerFromPot()" classname="logic.RealPlayerTest" time="0.002"/>
+  <testcase name="testGetPlayerIsHumanTrue()" classname="logic.RealPlayerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

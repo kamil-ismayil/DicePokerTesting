@@ -1,65 +1,0 @@
-5The player must bet more than the previous max bet!
-	LBPN: 1
-$The player cannot afford this bet!
-#Calling cost for this player is 5
-5The player must bet more than the previous max bet!
-"$Calling cost for this player is 10
-$1 
-$moo
-$2 
-$moo
-$3 
-$moo
-$4 
-$moo
-$0	1	0	100	1	1
-$Mee
-$10 20 30 40
-$Mee
-%CPP: 1 FPP: 0
-+	LBPN: 2
-2$Calling cost for this player is 10
-9	LBPN: 1
-F	LBPN: 1
-HCPP: 0 FPP: 0
-KJ10
-KJ10
-KL5
-KM6
-KN6
-KO6
-KP1 1 1 1 1
-KP2 1 1 1 1
-KQ1 1 1 1 1
-KQ1 2 1 1 1
-KR1 1 1 1 1
-KR1 1 2 1 1
-KS100
-KTDante
-KU1
-KU2
-KV1
-KV2
-KW1
-KW2
-KX1
-KX2
-KY1
-KY2
-KZ6
-K[false
-K\100
-K\80
-K]6
-K^Dante	80	true	6 2 5 2 5 
-K^Albedo	150	false	1 6 1 2 2 
-K^Dante	40	true	4 4 3 2 4 
-K^Albedo	190	false	4 6 6 3 5 
-K_1 1 1 1 1
-K_1 1 1 2 1
-K`1 1 1 1 1
-K`1 1 1 1 2
-KaFake: 5 Real: 5
-Kb100
-Kb120
-Kctrue
