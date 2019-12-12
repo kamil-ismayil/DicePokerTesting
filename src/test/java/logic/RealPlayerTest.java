@@ -20,7 +20,7 @@ public class RealPlayerTest {
 
         player.setName("Dante");
 
-        Assertions.assertEquals("Dante", player.getName());
+        Assertions.assertEquals("Dante", player.getName(), "player name should be Dante");
     }
 
     @Test
@@ -29,56 +29,56 @@ public class RealPlayerTest {
 
         player.setMarker(100);
 
-        Assertions.assertEquals(100, player.getMarker());
+        Assertions.assertEquals(100, player.getMarker(), "player mark should be 100");
     }
 
     @Test
     void testGetPlayerIsHumanTrue () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertTrue(player.isHuman());
+        Assertions.assertTrue(player.isHuman(), "player isHuman should be true");
     }
 
     @Test
     void testGetPlayerIsHumanFalse () {
         RealPlayer player = new RealPlayer("Dante", 100, false);
 
-        Assertions.assertFalse(player.isHuman());
+        Assertions.assertFalse(player.isHuman(), "player isHuman should be false");
     }
 
     @Test
     void testDie1NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertEquals(6, player.die1.getSides());
+        Assertions.assertEquals(6, player.die1.getSides(), "player die1 should have 6 sides");
     }
 
     @Test
     void testDie2NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertEquals(6, player.die2.getSides());
+        Assertions.assertEquals(6, player.die2.getSides(), "player die2 should have 6 sides");
     }
 
     @Test
     void testDie3NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertEquals(6, player.die3.getSides());
+        Assertions.assertEquals(6, player.die3.getSides(), "player die3 should have 6 sides");
     }
 
     @Test
     void testDie4NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertEquals(6, player.die4.getSides());
+        Assertions.assertEquals(6, player.die4.getSides(), "player die4 should have 6 sides");
     }
 
     @Test
     void testDie5NumberOfSides () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertEquals(6, player.die5.getSides());
+        Assertions.assertEquals(6, player.die5.getSides(), "player die5 should have 6 sides");
     }
 
     @Test
@@ -87,7 +87,7 @@ public class RealPlayerTest {
 
         player.rollSomeDie(true, false, false, false, false);
 
-        Assertions.assertEquals(2, player.die1.getTimesRolled());
+        Assertions.assertEquals(2, player.die1.getTimesRolled(), "die1 should have rolled two times after it's creation");
     }
 
     @Test
@@ -96,7 +96,7 @@ public class RealPlayerTest {
 
         player.rollSomeDie(false, true, false, false, false);
 
-        Assertions.assertEquals(2, player.die2.getTimesRolled());
+        Assertions.assertEquals(2, player.die2.getTimesRolled(), "die2 should have rolled two times after it's creation");
     }
 
     @Test
@@ -105,7 +105,7 @@ public class RealPlayerTest {
 
         player.rollSomeDie(false, false, true, false, false);
 
-        Assertions.assertEquals(2, player.die3.getTimesRolled());
+        Assertions.assertEquals(2, player.die3.getTimesRolled(), "die3 should have rolled two times after it's creation");
     }
 
     @Test
@@ -114,7 +114,7 @@ public class RealPlayerTest {
 
         player.rollSomeDie(false, false, false, true, false);
 
-        Assertions.assertEquals(2, player.die4.getTimesRolled());
+        Assertions.assertEquals(2, player.die4.getTimesRolled(), "die4 should have rolled two times after it's creation");
     }
 
     @Test
@@ -123,7 +123,7 @@ public class RealPlayerTest {
 
         player.rollSomeDie(false, false, false, false, true);
 
-        Assertions.assertEquals(2, player.die5.getTimesRolled());
+        Assertions.assertEquals(2, player.die5.getTimesRolled(), "die5 should have rolled two times after it's creation");
     }
 
     @Test
@@ -132,7 +132,7 @@ public class RealPlayerTest {
 
         player.rollAllDice();
 
-        Assertions.assertEquals(2, player.die1.getTimesRolled());
+        Assertions.assertEquals(2, player.die1.getTimesRolled(), "die1 should have rolled two times after it's creation");
     }
 
     @Test
@@ -141,7 +141,7 @@ public class RealPlayerTest {
 
         player.rollAllDice();
 
-        Assertions.assertEquals(2, player.die2.getTimesRolled());
+        Assertions.assertEquals(2, player.die2.getTimesRolled(), "die2 should have rolled two times after it's creation");
     }
 
     @Test
@@ -150,7 +150,7 @@ public class RealPlayerTest {
 
         player.rollAllDice();
 
-        Assertions.assertEquals(2, player.die3.getTimesRolled());
+        Assertions.assertEquals(2, player.die3.getTimesRolled(), "die3 should have rolled two times after it's creation");
     }
 
     @Test
@@ -159,7 +159,7 @@ public class RealPlayerTest {
 
         player.rollAllDice();
 
-        Assertions.assertEquals(2, player.die4.getTimesRolled());
+        Assertions.assertEquals(2, player.die4.getTimesRolled(), "die4 should have rolled two times after it's creation");
     }
 
     @Test
@@ -168,7 +168,7 @@ public class RealPlayerTest {
 
         player.rollAllDice();
 
-        Assertions.assertEquals(2, player.die5.getTimesRolled());
+        Assertions.assertEquals(2, player.die5.getTimesRolled(), "die5 should have rolled two times after it's creation");
     }
 
     @Test
@@ -177,7 +177,7 @@ public class RealPlayerTest {
 
         player.payMarkerToPot(20);
 
-        Assertions.assertEquals(80, player.getMarker());
+        Assertions.assertEquals(80, player.getMarker(), "the player should have 80 marks");
     }
 
     @Test
@@ -186,7 +186,7 @@ public class RealPlayerTest {
 
         player.payMarkerToPot(20);
 
-        Assertions.assertEquals(10, player.getMarker());
+        Assertions.assertEquals(10, player.getMarker(), "hte player shouldn't not be paying and should still have 10 marks");
     }
 
     @Test
@@ -195,14 +195,14 @@ public class RealPlayerTest {
 
         player.payMarkerFromPot(20);
 
-        Assertions.assertEquals(120, player.getMarker());
+        Assertions.assertEquals(120, player.getMarker(),"the player should have 120 marks");
     }
 
     @Test
     void testgetDice () {
         RealPlayer player = new RealPlayer("Dante", 100, true);
 
-        Assertions.assertEquals(5, player.getDice().size());
+        Assertions.assertEquals(5, player.getDice().size(), "the size should be 5");
     }
 
     @Test
@@ -212,7 +212,7 @@ public class RealPlayerTest {
 
         when(fakePlayer.getDieValues()).thenReturn(new int[] {1,2,3,4,5});
 
-        Assertions.assertEquals(fakePlayer.getDieValues().length, player.getDieValues().length);
+        Assertions.assertEquals(fakePlayer.getDieValues().length, player.getDieValues().length, "The lenght should be 5");
     }
 
     @Test
@@ -223,7 +223,7 @@ public class RealPlayerTest {
         player.rollAllDice(); player.payMarkerToPot(40);
         player2.rollAllDice(); player2.payMarkerFromPot(40);
 
-        Assertions.assertNotEquals(player2.toStorageString(), player.toStorageString());
+        Assertions.assertNotEquals(player2.toStorageString(), player.toStorageString(),  player2.toStorageString() + "\n" + player.toStorageString());
     }
 
 
